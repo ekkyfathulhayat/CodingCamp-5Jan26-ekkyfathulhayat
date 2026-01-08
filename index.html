@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="judul">Todo List</h1>
+  
+    <!-- Progress Section -->
+    <div class="stats">
+      <div class="stat-box">
+        <span class="material-symbols-outlined">data_alert</span>
+        <p>TOTAL TASKS</p>
+        <h2 id="totalCount">0</h2>
+      </div>
+
+      <div class="stat-box">
+        <span class="material-symbols-outlined">check_circle</span>
+        <p>COMPLETED</p>
+        <h2 id="completedCount">0</h2>
+      </div>
+
+      <div class="stat-box">
+        <span class="material-symbols-outlined">schedule</span>
+        <p>PENDING</p>
+        <h2 id="pendingCount">0</h2>
+      </div>
+
+      <div class="stat-box">
+        <span class="material-symbols-outlined">donut_large</span>
+        <p>PROGRESS</p>
+        <h2 id="progressPercent">0%</h2>
+      </div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Add task name">
+      <input type="date" id="dateInput">
+      <button class="add-btn" id="addTaskBtn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+    </div>
+
+    <!-- Action -->
+      <div class="buttons">
+        <div class="filter-wrapper">
+          <span class="material-symbols-outlined filter-icon">
+          filter_list
+          </span>
+
+        <select id="filterSelect" class="filter-btn">
+          <option value="" selected disabled hidden>Filter</option>
+          <option value="all">All Task</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+        </div>
+  
+        <button class="delete-btn" id="deleteAllBtn">
+          <span class="material-symbols-outlined">delete</span>
+          Delete All
+        </button> 
+      </div>
+        
+      <!-- TABLE -->
+    <div class="table">
+      <div class="table-header">
+        <span>Task</span>
+        <span>Due Date</span>
+        <span>Status</span>
+        <span>Actions</span>
+      </div>
+
+      <div id="taskList">
+  <div class="no-task">No task found</div>
+</div>
+
+    </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      Made by <strong>Ekky</strong>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
